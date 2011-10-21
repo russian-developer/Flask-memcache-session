@@ -19,7 +19,9 @@ class Session(SessionInterface):
                     ]
                 )
         app.logger.debug('Open session %s', self.memcache_session_id)
-        return self.session_class(app.cache.get(self.memcache_session_id) or {})
+        session = app.cache.get(self.memcache_session_id) or {}
+        app.cache.set(self.memcache_session_id, session)
+        return self.session_class(session)
 
     def save_session(self, app, session, response):
         expires = self.get_expiration_time(app, session)
