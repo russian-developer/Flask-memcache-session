@@ -8,5 +8,5 @@ setup(name="flask-memcache-session",
       author_email = "c.slednev@gmail.com",
       url = "https://github.com/unk2k/Flask-memcache-session",
       license = "BSD License",
-      py_modules = ['flask_memcache_session']
+      packages = ['flask_memcache_session']
       )
