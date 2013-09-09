@@ -1,0 +1,4 @@
+graft flask_memcache_session
+global-exclude *.pyc
+include README.md
+

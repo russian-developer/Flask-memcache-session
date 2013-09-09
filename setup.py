@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(name="flask-memcache-session",
-      version = '1.0',
+      version = '2.0',
       description = "Use memcache for store session data",
       author = "Constantine Slednev",
       author_email = "c.slednev@gmail.com",
