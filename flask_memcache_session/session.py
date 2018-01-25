@@ -7,7 +7,7 @@ class Session(SessionInterface):
     session_class = SessionData
 
     def open_session(self, app, request):
-        self.cookie_session_id = request.cookies.get(app.session_cookie_name, None)
+        self.cookie_session_id = request.cookies.get(app.session_cookie_name, type=str)
         self.session_new = False
         if self.cookie_session_id is None:
             self.cookie_session_id = os.urandom(40).encode('hex')
